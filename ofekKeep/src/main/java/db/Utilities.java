@@ -7,10 +7,6 @@ public class Utilities {
 	public static final String USER_NAME = "userName";
 	public static final String NOTE_TYPE = "noteType";
 	
-	public static enum NoteType{
-		bullet,
-		text
-	}
 	
 	public static enum NetworkType{
 		internet,
