@@ -33,6 +33,10 @@ public class DBhandler {
 			
 			MongoCollection<Document> notesCollection = this.db.getCollection("notes");
 			Document document = new Document();
+			document.append(Utilities.UUID, note.get_id());
+			document.append(Utilities.USER_NAME, note.getUser());
+			document.append(Utilities.DESCRIPTION, note.getDescription());
+			document.append(Utilities.UUID, note.getDate());
 			document.append(Utilities.TITLE, note.getTitle());
 			notesCollection.insertOne(document);
 		} 
