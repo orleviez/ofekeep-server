@@ -1,13 +1,18 @@
 package db;
 
+import java.util.ArrayList;
+
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+import entities.Note;
+import entities.User;
+
 public class handler {
 	
-	public static void insertNote(String note) {
+	public static void insertNote(Note note) {
 		try {
 			MongoClientURI connectionString = new MongoClientURI("mongodb+srv://Admin:Admin@cluster0-9b4qk.mongodb.net/test");
 			MongoClient mongoClient = new MongoClient(connectionString);
@@ -30,8 +35,8 @@ public class handler {
 		
 	}
 	
-//	public ArrayList<Note> getAllNotes(User user){
-//		
-//		return null;
-//	}
+	public ArrayList<Note> getAllNotes(User user){
+		
+		return null;
+	}
 }
