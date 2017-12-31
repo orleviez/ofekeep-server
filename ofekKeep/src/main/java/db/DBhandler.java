@@ -29,8 +29,7 @@ public class DBhandler {
 	}
 	
 	public void insertNote(Note note) {
-		try {
-			
+		try {	
 			MongoCollection<Document> notesCollection = this.db.getCollection("notes");
 			Document document = new Document();
 			document.append(Utilities.UUID, note.get_id());
@@ -47,8 +46,9 @@ public class DBhandler {
 		}
 	}
 	
-	public void updateNote(Note note) {
-		
+	public void updateNote(Note note, Note oldNote) {
+		MongoCollection<Document> notesCollection = this.db.getCollection("notes");
+		Document document = new Document();
 	}
 	
 	public void removeNote() {
