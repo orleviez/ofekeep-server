@@ -21,9 +21,10 @@ public class DBhandler {
 	public DBhandler()
 	{
 		if (db == null) {
-			connectionString = new MongoClientURI("mongodb+srv://Ofekeep:Ofekeep@cluster0-9b4qk.mongodb.net/test");
+			
+			connectionString= new  MongoClientURI("mongodb+srv://Admin:Admin@cluster0-9b4qk.mongodb.net/test");
 			mongoClient = new MongoClient(connectionString);
-			db = mongoClient.getDatabase("ofekeep");
+			db = mongoClient.getDatabase("test");
 		}
 	}
 	
