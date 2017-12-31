@@ -36,15 +36,19 @@ public class DBhandler {
 			document.append(Utilities.UUID, note.get_id());
 			document.append(Utilities.USER_NAME, note.getUser());
 			document.append(Utilities.DESCRIPTION, note.getDescription());
-			document.append(Utilities.UUID, note.getDate());
+			document.append(Utilities.DATE, note.getDate().toString());
 			document.append(Utilities.TITLE, note.getTitle());
+			document.append(Utilities.IS_DELETED, note.isDeleted());
 			notesCollection.insertOne(document);
 		} 
 		
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-
+	}
+	
+	public void updateNote(Note note) {
+		
 	}
 	
 	public void removeNote() {

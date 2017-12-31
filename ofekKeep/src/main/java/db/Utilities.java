@@ -9,7 +9,7 @@ public class Utilities {
 	public static final String TEXT = "text";
 	public static final String USER_NAME = "userName";
 	public static final String NOTE_TYPE = "noteType";
-	
+	public static final String IS_DELETED = "isDeleted";
 	
 	public static enum NetworkType{
 		internet,
